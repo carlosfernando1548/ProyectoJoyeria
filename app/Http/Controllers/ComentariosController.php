@@ -21,7 +21,7 @@ class ComentariosController extends Controller
     }
 
     function getValidar(Request $req){
-        $comentarios = DB::table("vw_comentarios")->where("com_estatus",0)->get();
+        $comentarios = DB::table("vw_comentarios")->where("com_estatus","!=",2)->get();
 
         return view("admin.validarComentarios", ["comentarios" => $comentarios]);
     }
