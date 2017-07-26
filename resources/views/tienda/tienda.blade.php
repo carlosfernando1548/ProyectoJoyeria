@@ -64,6 +64,8 @@
 	
 	<script src="{{URL::asset('templete/js/jquery.themepunch.tools.min.js')}}"></script>
     <script src="{{URL::asset('templete/js/jquery.themepunch.revolution.min.js')}}"></script>
+
+	@yield("css")
 	
 	</head>
     <body>
