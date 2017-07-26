@@ -6,7 +6,7 @@
         <br>        
         <div class="row">
             <div class="col-md-5">
-                <img src="{{url('templete/images/the-founders-img.jpg')}}" alt="">
+                <img src="{{$producto->pro_imagen!='noimage'?url('storage/'.$producto->pro_imagen):URL::asset('templete/images/shop/1.jpg')}}" alt="">
             </div>
             <div class="col-md-7">
                 <p>{{$producto->pro_desc}}</p>
