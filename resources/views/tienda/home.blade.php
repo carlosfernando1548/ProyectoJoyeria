@@ -27,7 +27,8 @@
             @foreach($productos as $pro)
                 <li class="mix weekly">
                     <div class="product">
-                        <a href="products.html"><img src="{{URL::asset('templete/images/featured-products/today/1.jpg')}}" alt=""></a>
+                        <a href="products.html"><img src="{{$pro->pro_imagen!='noimage'?url('storage/'.$pro->pro_imagen):URL::asset('templete/images/featured-products/today/1.jpg')}}
+" alt=""></a>
                         <h4>{{$pro->pro_nombre}}</h4>
                         <p>{{$pro->pro_desc}}</p>
                         <p class="price">${{$pro->pro_costo}}</p>
@@ -38,7 +39,8 @@
             @foreach($productos as $pro)
                 <li class="mix monthly">
                     <div class="product">
-                        <a href="products.html"><img src="{{URL::asset('templete/images/featured-products/today/1.jpg')}}" alt=""></a>
+                        <a href="products.html"><img src="{{$pro->pro_imagen!='noimage'?url('storage/'.$pro->pro_imagen):URL::asset('templete/images/featured-products/today/1.jpg')}}
+" alt=""></a>
                         <h4>{{$pro->pro_nombre}}</h4>
                         <p>{{$pro->pro_desc}}</p>
                         <p class="price">${{$pro->pro_costo}}</p>
@@ -60,7 +62,7 @@
 
         @forelse($newProductos as $prod)
             <div class="product">
-                <a href="#."><img src="{{URL::asset('templete/images/new-products/1.jpg')}}" alt=""></a>
+                <a href="#."><img src="{{$prod->pro_imagen!='noimage'?url('storage/'.$prod->pro_imagen):URL::asset('templete/images/new-products/1.jpg')}}" alt=""></a>
                 <h4>{{$prod->pro_nombre}}</h4>
                 <p>{{$pro->pro_desc}}</p>
                 <p class="price">${{$prod->pro_costo}}</p>
