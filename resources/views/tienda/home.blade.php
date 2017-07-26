@@ -15,7 +15,8 @@
             @foreach($productos as $pro)
                 <li class="mix today">
                     <div class="product">
-                        <a href="{{url('productos?cat=').$pro->cat_id}}"><img src="{{URL::asset('templete/images/featured-products/today/1.jpg')}}" alt=""></a>
+                        <a href="{{url('productos?cat=').$pro->cat_id}}"><img src="{{$pro->pro_imagen!='noimage'?url('storage/'.$pro->pro_imagen):URL::asset('templete/images/featured-products/today/1.jpg')}}
+" alt=""></a>
                         <h4>{{$pro->pro_nombre}}</h4>
                         <p>{{$pro->pro_desc}}</p>
                         <p class="price">${{$pro->pro_costo}}</p>
