@@ -43,6 +43,8 @@ Route::get('productos', "Productos@tiendaProductosByCat");
 Route::get('productosdetalles', "Productos@tiendaProductosById");
 Route::post('productos/busqueda', "Productos@buscador");
 Route::post('comentarios/comentar', "ComentariosController@addComent");
+Route::post('comentarios/aceptarComentario', "ComentariosController@aceptarComentario");
+Route::post('comentarios/deleteComentario', "ComentariosController@deleteComentario");
 Route::get('administrador/comentarios', "ComentariosController@getValidar");
 
 
