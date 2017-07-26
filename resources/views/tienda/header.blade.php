@@ -49,8 +49,7 @@
                             <span id="carritoSubtotal">$0</span>
                         </div>
                         <div class="shop-cart-buttons clearfix">
-                            <a href="#." class="view-cart">Ver Carrito</a>
-                            <a href="#." class="check-out">Pagar</a>
+                            <a href="{{url('carrito/verCarrito')}}" class="view-cart">Ver Carrito</a>
                         </div>
                     </div>
                 </div>
