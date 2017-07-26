@@ -12,7 +12,7 @@
             <li>
                 <div class="product-bordered">
                     <div class="product-thumb">
-                        <a href="{{url('productosdetalles?id=').$pro->pro_id}}"><img src="{{URL::asset('templete/images/shop/1.jpg')}}" alt=""></a>
+                        <a href="{{url('productosdetalles?id=').$pro->pro_id}}"><img src="{{$pro->pro_imagen!='noimage'?url('storage/'.$pro->pro_imagen):URL::asset('templete/images/shop/1.jpg')}}" alt=""><!--<img src="{{URL::asset('templete/images/shop/1.jpg')}}" alt="">--></a>
                     </div>
                     <div class="product-description clearfix">
                         <h3><a href="{{url('productosdetalles?id=').$pro->pro_id}}">{{$pro->pro_nombre}}</a></h3>
