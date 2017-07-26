@@ -93,6 +93,7 @@ class Productos extends Controller
 
         $query = DB::table('productos as p')->select("p.*")
                                             ->join("categorias as c","c.cat_id", "=", "p.cat_id")
+                                            ->where("p.pro_visible", 1)
                                             ->where("p.cat_id", $req->input("cat"));
 
         $productos = $query->get();

@@ -10,8 +10,9 @@ use Session;
 
 class UsuariosController extends Controller
 {
-    function reportes(){
-        return view('admin.reporte');
+    function reportes(Request $req){
+        $comprobantes = DB::table("vw_mescomprobante")->where("cli_id", $req->session()->get("id"))->get();
+        return view('admin.reporte', ["comprobante" => $comprobantes]);
     }
 
     function index(Request $req){

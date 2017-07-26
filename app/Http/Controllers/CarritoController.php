@@ -84,7 +84,10 @@ class CarritoController extends Controller
     function deletePro(Request $req){
         $id = $req->input("id");
        
-        DB::table("carrito")->where("cli_id", $req->session()->get("id"))->where("pro_id", $id)->update(["car_estado" => 2]);
+        DB::table("carrito")->where("cli_id", $req->session()->get("id"))
+                            ->where("pro_id", $id)
+                            ->where("car_estado",0)
+                            ->update(["car_estado" => 2]);
 
         return redirect()->action("CarritoController@verCarrito");
     }
