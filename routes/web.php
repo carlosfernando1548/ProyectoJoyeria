@@ -65,6 +65,7 @@ Route::post('carrito/getCarrito', "CarritoController@getCarrito");
 Route::post('carrito/addProdCarrito', "CarritoController@addCarrito");
 Route::post('carrito/addFavorito', "CarritoController@addFavorito");
 Route::get('carrito/verCarrito', "CarritoController@verCarrito");
+Route::get('carrito/deletePro', "CarritoController@deletePro");
 Route::get('clientes/perfil', "UsuariosController@perfil");
 Route::post('pagos/pagar', "PagosController@pagar");
 
